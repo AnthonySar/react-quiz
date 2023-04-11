@@ -24,10 +24,9 @@ const Login = () => {
     
     signInWithEmailAndPassword(auth, email, password)
     .then(user => {
-      console.log(user)
       setEmail('');
       setPassword('');
-      navigate('/welcome');
+      navigate('/welcome', { replace: true });
     }).catch(error => {
       setError(error);
       setEmail('');
@@ -35,7 +34,7 @@ const Login = () => {
     })
   }
 
-  const btnCo = btn ? <button>Connexion</button> : <button disabled>Connexion</button>;
+  const btnCo = <button disabled={btn ? false : true}>Connexion</button>;
 
   // Gestion des erreurs
   const errorMsg = error !== "" && <span>{error.message}</span>;
