@@ -1,23 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../Firebase/firebaseConfig';
+import { auth, user } from '../Firebase/firebaseConfig';
+import { onAuthStateChanged } from 'firebase/auth';
+import { getDoc } from 'firebase/firestore';
 import Logout from '../Logout';
 import Quiz from '../Quiz';
 
 const Welcome = () => {
 
   const [userSession, setUserSession] = useState(null);
+  const [userData, setUserData] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
-    let userListener = auth.onAuthStateChanged((user) => {
+    let userListener = onAuthStateChanged(auth, user => {
       user ? setUserSession(user) : navigate('/')
     })
+
+    if (!!userSession) {
+      const userId = user(userSession.uid);
+
+      getDoc(userId)
+      .then( snapshot => {
+        if (snapshot.exists()) {
+          const docData = snapshot.data();
+          setUserData(docData);
+        }
+      })
+      .catch( error => {
+        console.log(error)
+      })
+    }
 
     return () => {
       userListener();
     }
-  }, []);
+  }, [userSession]);
 
   return userSession === null ? (
     <>
@@ -29,7 +47,7 @@ const Welcome = () => {
     <div className='quiz-bg'>
       <div className='container'>
         <Logout />
-        <Quiz />
+        <Quiz userData={userData}/>
       </div>
     </div>
   )
