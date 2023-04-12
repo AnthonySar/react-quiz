@@ -1,53 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../Firebase/firebaseConfig';
 
-const Login = () => {
+const ForgetPassword = () => {
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [btn, setBtn] = useState(false);
-  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (email !== '' && password.length > 5) {
+    if (email !== '') {
       setBtn(true)
     } else if (btn) {
       setBtn(false)
     }
-  }, [email, password, btn]);
+  }, [email, btn])
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    signInWithEmailAndPassword(auth, email, password)
+
+    sendPasswordResetEmail(auth, email)
     .then(user => {
+      setError(null);
+      setSuccess(`Le mail a bien été envoyé à : ${email}`);
       setEmail('');
-      setPassword('');
-      navigate('/welcome', { replace: true });
+      setTimeout(() => {
+        navigate('/login')
+      }, 5000)
     }).catch(error => {
       setError(error);
       setEmail('');
-      setPassword('');
     })
   }
 
-  const btnCo = <button disabled={btn ? false : true}>Connexion</button>;
+  const btnGet = <button disabled={btn ? false : true}>Récupérer</button>;
 
   // Gestion des erreurs
-  const errorMsg = error !== "" && <span>{error.message}</span>;
+  const successMsg = success && 
+    <span style={{
+        border: "2px solid white", 
+        background: "green", 
+        color: "white"
+        }}>
+        {success}
+    </span>;
+
+    const errorMsg = error && <span>{error.message}</span>
 
   return (
     <div className='signUpLoginBox'>
       <div className='slContainer'>
-        <div className='formBoxLeftLogin'></div>
+        <div className='formBoxLeftForget'></div>
         <div className='formBoxRight'>
           <div className='formContent'>
+            { successMsg }
             { errorMsg }
 
-            <h2>Connexion</h2>
+            <h2>Mot de passe oublié ?</h2>
 
             <form onSubmit={handleSubmit}>
               <div className='inputBox'>
@@ -55,19 +67,14 @@ const Login = () => {
                 <label htmlFor='email'>Email</label>
               </div>
 
-              <div className='inputBox'>
-                <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" id='password' required autoComplete='off' />
-                <label htmlFor='password'>Mot de passe</label>
-              </div>
-
-              { btnCo }
+              { btnGet }
             </form>
 
             <div className='linkContainer'>
-              <Link className='simpleLink' to="/signup">Pas encore inscrit ? Let's go !</Link>
+              <Link className='simpleLink' to="/login">Déjà inscrit ? Let's go !</Link>
               <br />
-              <Link className='simpleLink' to="/forgetpassword">Mot de passe oublié ? C'est par ici !</Link>
-            </div>
+              <Link className='simpleLink' to="/signup">Nouveau sur le site ? Inscrivez-vous !</Link>
+            </div>            
           </div>
         </div>
       </div>
@@ -75,4 +82,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default ForgetPassword;
