@@ -3,9 +3,11 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../Firebase/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 
-const Logout = () => {
+const Logout = (props) => {
   const [checked, setChecked] = useState(false);
   const navigate = useNavigate();
+
+  const { pseudo } = props.userData;
   
   useEffect(() => {
     if (checked) {
@@ -27,6 +29,7 @@ const Logout = () => {
 
   return (
     <div className="logoutContainer">
+      <h2>Salut {pseudo}</h2>
       <label className="switch">
         <input
           onChange={handleChange}
