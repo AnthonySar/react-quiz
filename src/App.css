@@ -66,6 +66,14 @@ h3 {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.custom-h2 {
+  font-family: 'Bangers', cursive;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--red-color);
+}
+
 body {
   margin: 0;
   padding: 0;
