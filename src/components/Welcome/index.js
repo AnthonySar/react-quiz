@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth, user } from '../Firebase/firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
 import { getDoc } from 'firebase/firestore';
+import './Welcome.css';
 import Logout from '../Logout';
 import Quiz from '../Quiz';
 

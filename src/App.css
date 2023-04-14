@@ -4,12 +4,10 @@
 /* HR */
 /* HEADER */
 /* MAIN */
-/* WELCOME PAGE */
 /* TOASTIFY COLOR */
 /* FOOTER */
 /* ERROR PAGE */
 /* SIGNUP - LOGIN - FORGETPASSWORD */
-/* LOADER */
 /* LOGOUT SWITCH */
 /* LEVELS */
 /* PROGRESS BAR */
@@ -26,11 +24,11 @@
 :root {
   --white-color: #ffffff;
   --light-grey-color: #EAE8E8;
-  --light-green-color: #1ecc78;
-  --green-color: #0cb765;
-  --red-color: #EB1D27;
+  --light-green-color: #A0E8AF;
+  --green-color: #3AB795;
+  --red-color: #FF6961;
   --blue-color: #4f78a4;
-  --dark-red-color: #d31017;
+  --dark-red-color: #A80900;
   --dark-grey-color: #363636;
   --black-color: #333030;
   --deep-black-color: #000000;
@@ -103,62 +101,6 @@ main {
   flex-grow: 1;
 }
 /* END MAIN */
-
-/* WELCOME PAGE */
-.welcomePage {
-  background-color: var(--red-color);
-  background-image: url(images/wolverine.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  justify-content: space-between;
-  height: 500px;
-}
-
-.startingImg {
-  background-image: url(images/xmen.png);
-}
-
-.leftImg {
-  background-image: url(images/wolverine.png), url(images/griffes-gauche.png);
-}
-
-.rightImg {
-  background-image: url(images/wolverine.png), url(images/griffes-droit.png);
-}
-
-.leftBox {
-  display: flex;
-  flex: 0 1 35%;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.rightBox {
-  display: flex;
-  flex: 0 1 35%;
-  align-items: flex-start;
-}
-
-.btn-welcome {
-  border: 2px solid var(--white-color);
-  color: var(--white-color);
-  padding: 12px 25px;
-  border-radius: 5px;
-  background-color: transparent;
-  font-weight: normal;
-  font-size: 19px;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 150px;
-}
-
-.btn-welcome:hover {
-  border: 2px solid var(--white-color);
-  color: var(--red-color);
-  background-color: var(--white-color);
-}
-/* END WELCOME PAGE */
 
 /* TOASTIFY COLOR */
 .toastify-color-welcome {
@@ -365,44 +307,6 @@ button[disabled]:hover {
 }
 /* END SIGNUP - LOGIN - FORGETPASSWORD */
 
-/* LOADER */
-.loader {
-  border: 10px solid var(--light-grey-color);
-  border-radius: 50%;
-  border-top: 10px solid var(--dark-red-color);
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
-  margin: 40px auto 20px;
-}
-
-.loaderText {
-  text-align: center;
-  color: var(--white-color);
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* END LOADER */
-
 /* LOGOUT SWITCH */
 .logoutContainer {
   display: flex;
@@ -431,7 +335,7 @@ button[disabled]:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--light-grey-color);
+  background-color: var(--green-color);
   -webkit-transition: .4s;
   transition: .4s;
 }

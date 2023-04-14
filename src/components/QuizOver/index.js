@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Loader from '../Loader';
 
 const QuizOver = React.forwardRef((props, ref) => {
 
@@ -89,10 +90,7 @@ const QuizOver = React.forwardRef((props, ref) => {
   (
     <tr>
       <td colSpan="3">
-        <div className='loader'></div>
-        <p style={{textAlign: 'center', color: 'red'}}>
-          Vous n'avez pas la moyenne ! C'est pourquoi on vous montre pas les réponses ! Try again
-        </p>
+        <Loader />
       </td>
     </tr>
   )
