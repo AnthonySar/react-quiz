@@ -66,4 +66,31 @@
 .btn-welcome span:not(:hover) {
   transition: all 1s;
 }
+
+@media all and (max-width: 850px) {
+  .welcomePage {
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+  }
+
+  .leftBox {
+    display: flex;
+    flex: 0 1 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightBox {
+    display: flex;
+    flex: 0 1 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-welcome {
+    margin-top: 0;
+    flex-basis: 300px;
+  }
+}
 /* END WELCOME PAGE */

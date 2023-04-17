@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
 import Loader from '../Loader';
 import Modal from '../Modal';
 import axios from 'axios';
@@ -64,8 +66,6 @@ const QuizOver = React.forwardRef((props, ref) => {
       axios
       .get(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
       .then((response) => {
-        console.log(response)
-        console.log(id)
         setCharacterData(response.data);
         setCharacterLoading(false);
 
@@ -222,7 +222,15 @@ const QuizOver = React.forwardRef((props, ref) => {
           </div>
         </div>
         <div className='modalFooter'>
-          <button className='modalBtn'  onClick={hideModal}>X</button>
+          <button 
+            className='modalBtn' 
+            onClick={hideModal}
+            data-tooltip-id="ttpCloseModal" 
+            data-tooltip-content="Fermer la modal"
+          >
+            X
+          </button>
+          <Tooltip id='ttpCloseModal'/>
         </div>
         </>
       ) 
@@ -241,7 +249,6 @@ const QuizOver = React.forwardRef((props, ref) => {
     <>
       { decision }
       <hr />
-      <p>Réponses aux questions </p>
       <div className='answerContainer'>
         <table className='answers'>
           <thead>

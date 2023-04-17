@@ -38,7 +38,7 @@ const Logout = (props) => {
           type="checkbox"
           checked={checked}
         />
-        <span className="slider round" data-tooltip-id="ttpLogout" data-tooltip-content="Déconexion"></span>
+        <span className="slider round" data-tooltip-id="ttpLogout" data-tooltip-content="Déconnexion"></span>
       </label>
       <Tooltip id="ttpLogout"/>
     </div>
