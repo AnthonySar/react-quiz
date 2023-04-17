@@ -36,6 +36,7 @@ const Welcome = () => {
     return () => {
       userListener();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userSession]);
 
   return userSession === null ? (
