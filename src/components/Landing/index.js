@@ -2,36 +2,36 @@ import React, { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Landing = () => {
-  const refWolverine = useRef(null);
+  const refImg = useRef(null);
   const [btn, setBtn] = useState(false);
   
   useEffect(() => {
-    if (refWolverine) {
-      refWolverine.current.classList.add('startingImg');
+    if (refImg) {
+      refImg.current.classList.add('startingImg');
       setBtn(true);
 
-      if (refWolverine.current.classList.contains('startingImg')) {
+      if (refImg.current.classList.contains('startingImg')) {
         setTimeout(() => {
-          refWolverine.current.classList.remove('startingImg');
+          refImg.current.classList.remove('startingImg');
         }, 1000);
       }
     }
   }, []);
 
   const setLeftImg = () => {
-    refWolverine.current.classList.add('leftImg');
+    refImg.current.classList.add('leftImg');
   }
 
   const setRightImg = () => {
-    refWolverine.current.classList.add('rightImg');
+    refImg.current.classList.add('rightImg');
   }
 
   const clearImg = () => {
-    if(refWolverine) {
-      if (refWolverine.current.classList.contains('leftImg')) {
-        refWolverine.current.classList.remove('leftImg');
-      } else if (refWolverine.current.classList.contains('rightImg')) {
-        refWolverine.current.classList.remove('rightImg')
+    if(refImg) {
+      if (refImg.current.classList.contains('leftImg')) {
+        refImg.current.classList.remove('leftImg');
+      } else if (refImg.current.classList.contains('rightImg')) {
+        refImg.current.classList.remove('rightImg')
       } 
     }
 
@@ -40,15 +40,15 @@ const Landing = () => {
   const displayBtn = btn && 
     <>
       <div onMouseOver={setLeftImg} onMouseOut={clearImg} className='leftBox'>
-        <Link to="/signup" className='btn-welcome'>Inscription</Link>
+        <Link to="/signup" className='btn-welcome'><span>Inscription</span></Link>
       </div>
       <div onMouseOver={setRightImg} onMouseOut={clearImg} className='rightBox'>
-        <Link to="/login" className='btn-welcome'>Connexion</Link>
+        <Link to="/login" className='btn-welcome'><span>Connexion</span></Link>
       </div>
     </>;
 
   return (
-    <main ref={refWolverine} className='welcomePage'>
+    <main ref={refImg} className='welcomePage'>
       { displayBtn }
     </main>
   )

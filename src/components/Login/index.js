@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase/firebaseConfig';
+import Pokeball from '../CustomSvg/Pokeball';
 
 const Login = () => {
 
@@ -42,7 +43,9 @@ const Login = () => {
   return (
     <div className='signUpLoginBox'>
       <div className='slContainer'>
-        <div className='formBoxLeftLogin'></div>
+        <div className='formBoxLeftLogin'>
+          <Pokeball />
+        </div>
         <div className='formBoxRight'>
           <div className='formContent'>
             { errorMsg }

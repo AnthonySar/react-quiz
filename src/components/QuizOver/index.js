@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Loader from '../Loader';
+import Modal from '../Modal';
+import axios from 'axios';
 
 const QuizOver = React.forwardRef((props, ref) => {
 
@@ -13,10 +15,31 @@ const QuizOver = React.forwardRef((props, ref) => {
   } = props;
 
   const [asked, setAsked] = useState([]); 
+  const [openModal, setOpenModal] = useState(false); 
+
+
   useEffect(() => {
     setAsked(ref.current)
   }, [ref])
 
+  const showModal = (id) => {
+    setOpenModal(true)
+      console.log(id)
+
+    axios
+    .get(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
+    .then((response) => {
+      console.log(response)
+      console.log(id)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+
+  const hideModal = (id) => {
+    setOpenModal(false)
+  }
 
   const averageGrade = maxQuestions / 2;
 
@@ -81,7 +104,14 @@ const QuizOver = React.forwardRef((props, ref) => {
         <tr key={question.id}>
           <td>{question.question}</td>
           <td>{question.answer}</td>
-          <td><button className='btnInfo'>Infos</button></td>
+          <td>
+            <button 
+              className='btnInfo'
+              onClick={() => showModal(question.pokeId)}
+            >
+              Infos
+            </button>
+          </td>
         </tr>
       )
     })
@@ -115,6 +145,18 @@ const QuizOver = React.forwardRef((props, ref) => {
           </tbody>
         </table>
       </div>
+      
+      <Modal showModal={openModal} hideModal={hideModal}>
+        <div className='modalHeader'>
+          <h2>Title</h2>
+        </div>
+        <div className='modalBody'>
+          <p>Yo</p>
+        </div>
+        <div className='modalFooter'>
+          <button className='modalBtn'>X</button>
+        </div>
+      </Modal>
     </>
   )
 })

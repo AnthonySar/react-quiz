@@ -4,367 +4,367 @@ export const QuizApi = [
             debutant: [
                 {
                     id: 0,
-                    question: "De quelle équipe fait partie Iceman?",
+                    question: "Quel est le premier Pokémon du Pokédex National ?",
                     options: [
-                        "The X-Men",
-                        "The Fantastic Four",
-                        "The Invaders",
-                        "The Liberators"
+                        "Aspicot",
+                        "Carapuce",
+                        "Bulbizarre",
+                        "Salamèche"
                     ],
-                    answer: "The X-Men",
-                    heroId: 1009362
+                    answer: "Bulbizarre",
+                    pokeId: 1
                 },
                 {
                     id: 1,
-                    question: "Dans les X-Men, quelle substance constitue le squelette de Wolverine ?",
+                    question: "Quel est le Pokémon de type 'Electrik' ?",
                     options: [
-                        "Cavorite",
-                        "Vibranium",
-                        "Adamantium",
-                        "Neutronium"
+                        "Sabelette",
+                        "Nidoran",
+                        "Roucool",
+                        "Pikachu"
                     ],
-                    answer: "Adamantium",
-                    heroId: 1009718
+                    answer: "Pikachu",
+                    pokeId: 25
                 },
                 {
                     id: 2,
-                    question: "Quel est le nom de Spider-Man, apparu pour la première fois en 1962 ?",
+                    question: "Quel Pokémon ressemble à un chat ?",
                     options: [
-                        "Tom Parker",
-                        "John Parker",
-                        "Peter Parker",
-                        "Alan Parker"
+                        "Psykokwak",
+                        "Persian",
+                        "Caninos",
+                        "Férosinge"
                     ],
-                    answer: "Peter Parker",
-                    heroId: 1009610
+                    answer: "Persian",
+                    pokeId: 53
                 },
                 {
                     id: 3,
-                    question: "Comment s'appelait Wolverine quand il était cavalier d'Apocalypse?",
+                    question: "Quel Pokémon, de type psy, a le pouvoir de voyager dans le temps ?",
                     options: [
-                        "Rage",
-                        "Death",
-                        "Destruction",
-                        "Oblivion"
+                        "Mew",
+                        "Celebi",
+                        "Mr.Mime",
+                        "Mewtwo"
                     ],
-                    answer: "Death",
-                    heroId: 1009718
+                    answer: "Celebi",
+                    pokeId: 251
                 },
                 {
                     id: 4,
-                    question: "Quel super-héros ne se sépare jamais de son marteau forgé par les nains ?",
+                    question: "Quel Pokémon légendaire Sacha voit-il dans le premier épisode de la première saison ?",
                     options: [
-                        "Bizarro",
-                        "Flash",
-                        "Venom",
-                        "Thor"
+                        "Electhor",
+                        "Insolourdo",
+                        "Ho-Oh",
+                        "Roucool"
                     ],
-                    answer: "Thor",
-                    heroId: 1009664
+                    answer: "Ho-Oh",
+                    pokeId: 250
                 },
                 {
                     id: 5,
-                    question: "Quelle couleur est associée à Hulk ?",
+                    question: "Quelle est la première Pokéball que Sacha choisit comme starter lorsqu'il arrive en retard au laboratoire du professeur Chen ?",
                     options: [
-                        "Le jaune",
-                        "Le rouge",
-                        "Le vert",
-                        "Le bleu"
+                        "Carapuce",
+                        "Salamèche",
+                        "Bulbizarre",
+                        "Pikachu"
                     ],
-                    answer: "Le vert",
-                    heroId: 1009351
+                    answer: "Carapuce",
+                    pokeId: 7
                 },
                 {
                     id: 6,
-                    question: "Quel super-héros ressemble à un être de pierre ?",
+                    question: "Évoli peut évoluer en huit Pokémon différents. Lequel de ces huit Pokémon est de type plante ?",
                     options: [
-                        "Plastic Man",
-                        "The Thing",
-                        "Hawkman",
-                        "Superboy"
+                        "Mentali",
+                        "Pyroli",
+                        "Nymphali",
+                        "Phyllali"
                     ],
-                    answer: "The Thing",
-                    heroId: 1009662
+                    answer: "Phyllali",
+                    pokeId: 197
                 },
                 {
                     id: 7,
-                    question: "De qui Edwin Jarvis est-il le majordome?",
+                    question: "Trousselin est inspiré d'un(e)...",
                     options: [
-                        "Bruce Wayne",
-                        "Charles Xavier",
-                        "Tony Stark",
-                        "Henry Steven"
+                        "Trousseau de clés",
+                        "Trousse",
+                        "Des ciseaux",
+                        "Une feuille"
                     ],
-                    answer: "Tony Stark",
-                    heroId: 1009368
+                    answer: "Trousseau de clés",
+                    pokeId: 707
                 },
                 {
                     id: 8,
-                    question: "Quel super-héros porte un costume inspiré du drapeau américain ?",
+                    question: "Lequel de ces Pokémon est Légendaire ?",
                     options: [
-                        "Tigra",
-                        "Blade",
-                        "Iron Man",
-                        "Captain America"
+                        "Pikachu",
+                        "Fantominus",
+                        "Sulfura",
+                        "Dracaufeu"
                     ],
-                    answer: "Captain America",
-                    heroId: 1009220
+                    answer: "Sulfura",
+                    pokeId: 146
                 },
                 {
                     id: 9,
-                    question: "Y compris ses pouces, combien de doigts sur les deux mains possède The Thing?",
+                    question: "Dans combien de films voit-on Mewtwo ?",
                     options: [
-                        8,
-                        6,
-                        10,
+                        1,
+                        3,
+                        5,
                         4
                     ],
-                    answer: 8,
-                    heroId: 1009662
+                    answer: 3,
+                    pokeId: 150
                 }
             ],
             "confirme": [
                 {
                     id: 0,
-                    question: "Qui est Logan dans la bande dessinée de Marvel Comics 'X-Men' ?",
+                    question: "Quel Pokémon a cette description : 'Ses neuf magnifiques queues sont remplies d'une énergie incroyable lui assurant une vie de 1 000 ans.' ?",
                     options: [
-                        "Cyclope",
-                        "Colossus",
-                        "Wolverine",
-                        "Caliban"
+                        "Pashmilla",
+                        "Feunard",
+                        "Capidextre",
+                        "Miaouss"
                     ],
-                    answer: "Wolverine",
-                    heroId: 1009718
+                    answer: "Feunard",
+                    pokeId: 38
                 },
                 {
                     id: 1,
-                    question: "Quel super héros est intéressé par Sue Storm?",
+                    question: "Combien de vibrisses un Miaouss a-t-il ?",
                     options: [
-                        "X-Men",
-                        "Illuminati",
-                        "Spider-Man",
-                        "Namor"
+                        2,
+                        3,
+                        6,
+                        4
                     ],
-                    answer: "Namor",
-                    heroId: 1009466
+                    answer: 4,
+                    pokeId: 52
                 },
                 {
                     id: 2,
-                    question: "Quel humain devient surpuissant grâce à une armure de haute technologie ?",
+                    question: "Les Pikachu femelles ont une queue...",
                     options: [
-                        "Cyclope",
-                        "Iron Man",
-                        "Wolverine",
-                        "Thor"
+                        "En pic",
+                        "En coeur",
+                        "En trèfle",
+                        "Comme les mâles"
                     ],
-                    answer: "Iron Man",
-                    heroId: 1009368
+                    answer: "En coeur",
+                    pokeId: 25
                 },
                 {
                     id: 3,
-                    question: "Laquelle de ces propositions désigne un ennemi emblématique de Spider-Man ?",
+                    question: "Dans la sixième génération, y a-t-il plus ou moins de 100 Pokémon ?",
                     options: [
-                        "Lizard",
-                        "Thanos",
-                        "Void",
-                        "Green Goblin"
+                        "Plus",
+                        "C'est égal",
+                        "Moins",
+                        "Je sais pas"
                     ],
-                    answer: "Green Goblin",
-                    heroId: 1014985
+                    answer: "Moins",
+                    pokeId: 658
                 },
                 {
                     id: 4,
-                    question: "GHOST RIDER est connu comme étant",
+                    question: "Quel Pokémon est de type poison-eau ?",
                     options: [
-                        "Le diable motard",
-                        "L'esprit de la haine",
-                        "L'esprit de vengeance",
-                        "Le crâne rouge"
+                        "Qwilfish",
+                        "Carapuce",
+                        "Stari",
+                        "Corayon"
                     ],
-                    answer: "L'esprit de vengeance",
-                    heroId: 1009318
+                    answer: "Qwilfish",
+                    pokeId: 211
                 },
                 {
                     id: 5,
-                    question: "Avant de devenir Radioactive Man, Chen Lu était ..",
+                    question: "Quelle est l'évolution de Métang ?",
                     options: [
-                        "Un espion",
-                        "Un physicien nucléaire",
-                        "Un soldat",
-                        "Un pilote"
+                        "Métalosse",
+                        "Téraclope",
+                        "Téracide",
+                        "Il n'en a pas"
                     ],
-                    answer: "Un physicien nucléaire",
-                    heroId: 1009526
+                    answer: "Métalosse",
+                    pokeId: 376
                 },
                 {
                     id: 6,
-                    question: "Quel super-héros ayant perdu la vue possède des organes sensoriels développés ?",
+                    question: "Draco évolue en :",
                     options: [
-                        "Daredevil",
-                        "Flash",
-                        "Superman",
-                        "Captain America"
+                        "Drattak",
+                        "Dracofeu",
+                        "Dracoluche",
+                        "Dracolosse"
                     ],
-                    answer: "Daredevil",
-                    heroId: 1009262
+                    answer: "Dracolosse",
+                    pokeId: 149
                 },
                 {
                     id: 7,
-                    question: "Avant de se tourner vers une vie de crime, Mysterio était...",
+                    question: "Quelle est l'évolution du Pokémon préféré de sacha ?",
                     options: [
-                        "Cascadeur",
-                        "Artiste d'effets spéciaux",
-                        "Magicien",
-                        "Sapeur pompier"
+                        "Rattatac",
+                        "Empiflor",
+                        "Raichu",
+                        "Dardagnan"
                     ],
-                    answer: "Artiste d'effets spéciaux",
-                    heroId: 1010952
+                    answer: "Raichu",
+                    pokeId: 26
                 },
                 {
                     id: 8,
-                    question: "Fin Fang Foom est un alien de ..",
+                    question: "Qui évolue en Tyranocif ?",
                     options: [
-                        "Krypton",
-                        "Maklu IV",
-                        "Mars",
-                        "Vulcan"
+                        "Tarinor",
+                        "Ymphect",
+                        "Reptincel",
+                        "Tyranocif est un pokémon de base"
                     ],
-                    answer: "Maklu IV",
-                    heroId: 1009303
+                    answer: "Ymphect",
+                    pokeId: 247
                 },
                 {
                     id: 9,
-                    question: "DOCTOR DOOM a fréquenté le même collège que...",
+                    question: "Comment Évoli évolue-t-il en Voltali ?",
                     options: [
-                        "Tony Stark",
-                        "Peter Parker",
-                        "Reed Richards",
-                        "Bruce Banner"
+                        "Tout seul",
+                        "Avec un échange",
+                        "Avec une pierre",
+                        "Il n'existe pas"
                     ],
-                    answer: "Reed Richards",
-                    heroId: 1009281
+                    answer: "Avec une pierre",
+                    pokeId: 135
                 }
             ],
             "expert": [
                 {
                     id: 0,
-                    question: "Quand elle a travaillé pour Hydra, la première mission de Spider-Woman était de...",
+                    question: "De quel(s) type(s) est Lugulabre ?",
                     options: [
-                        "Séduire Iron-Man",
-                        "Séduire Spider-Man",
-                        "Tuer The Black Widow",
-                        "Tuer Nick Fury"
+                        "Feu",
+                        "Vol",
+                        "Ténèbres",
+                        "Spectre"
                     ],
-                    answer: "Tuer Nick Fury",
-                    heroId: 1009608
+                    answer: "Feu",
+                    pokeId: 609
                 },
                 {
                     id: 1,
-                    question: "Quel super-héros créé par Marvel Comics est aveugle de naissance ?",
+                    question: "Créfadet est de quel(s) type(s) ?",
                     options: [
-                        "Flash",
-                        "Thor",
-                        "Cyclope",
-                        "Stick"
+                        "Vol",
+                        "Normal",
+                        "Psy",
+                        "Fée"
                     ],
-                    answer: "Stick",
-                    heroId: 1009626
+                    answer: "Psy",
+                    pokeId: 482
                 },
                 {
                     id: 2,
-                    question: "Spider-Man a été sollicité pour créer la Spider-Mobile par la société de publicité de ...",
+                    question: "De quel(s) type(s) est Hyporoi ?",
                     options: [
-                        "Carter Lombardo",
-                        "Max Shrek",
-                        "Reed Richards",
-                        "Spider Company"
+                        "Eau",
+                        "Dragon",
+                        "Eau/Dragon",
+                        "Eau/Glace"
                     ],
-                    answer: "Carter Lombardo",
-                    heroId: 1009610
+                    answer: "Eau/Dragon",
+                    pokeId: 116
                 },
                 {
                     id: 3,
-                    question: "Quelle héroïne de Daredevil est une tueuse professionnelle ?",
+                    question: "De quel(s) type(s) est Aligatueur ?",
                     options: [
-                        "Ultron",
-                        "Catwoman",
-                        "Elektra",
-                        "Wonder Woman"
+                        "Glace",
+                        "Poison",
+                        "Combat",
+                        "Eau"
                     ],
-                    answer: "Elektra",
-                    heroId: 1009288
+                    answer: "Eau",
+                    pokeId: 160
                 },
                 {
                     id: 4,
-                    question: "Où réside Mandarin devenu récemment le patron du Sin-Cong Wong Chu?",
+                    question: "De quel(s) type(s) est Pitrouille ?",
                     options: [
-                        "The Valley of Spirits",
-                        "The Mountains of Asgard",
-                        "The Canyons of Atlantis",
-                        "The Cave of Souls"
+                        "Spectre",
+                        "Feu",
+                        "Spectre/Plante",
+                        "Feu/Plante"
                     ],
-                    answer: "The Valley of Spirits",
-                    heroId: 1009421
+                    answer: "Spectre/Plante",
+                    pokeId: 710
                 },
                 {
                     id: 5,
-                    question: "Quel super-héros possède les mêmes pouvoirs que Spider-Man ?",
+                    question: "Quel Pokémon est de type vol mais ne peut pas apprendre la CS02 vol ?",
                     options: [
-                        "Venom",
-                        "Green Arrow",
-                        "Blade",
-                        "Bizarro"
+                        "Yanma",
+                        "Roucool",
+                        "Cadoizo",
+                        "Doduo"
                     ],
-                    answer: "Venom",
-                    heroId: 1010788
+                    answer: "Yanma",
+                    pokeId: 193
                 },
                 {
                     id: 6,
-                    question: "Nick Fury a un frère devenu méchant. Quel est son nom?",
+                    question: "Quel Pokémon est de type normal ?",
                     options: [
-                        "Venom",
-                        "Viper",
-                        "The Red Skull",
-                        "Scorpio"
+                        "Chevroum",
+                        "Meloetta",
+                        "Lippouti",
+                        "Celebi"
                     ],
-                    answer: "Scorpio",
-                    heroId: 1011007
+                    answer: "Meloetta",
+                    pokeId: 648
                 },
                 {
                     id: 7,
-                    question: "Miss Marvel n'a jamais été connue sous le nom de:",
+                    question: "Combien de PV Munja peut-il avoir ?",
                     options: [
-                        "Captain Marvel",
-                        "Rogue",
-                        "Warbird",
-                        "Binary"
+                        1,
+                        10,
+                        100,
+                        1000
                     ],
-                    answer: "Rogue",
-                    heroId: 1010338
+                    answer: 1,
+                    pokeId: 292
                 },
                 {
                     id: 8,
-                    question: "Quelle est l'héroïne proche du Docteur Strange créée en 1964 ?",
+                    question: "Quel Pokémon est de type plante ?",
                     options: [
-                        "Felina",
-                        "Clea",
-                        "Monica",
-                        "Elsa"
+                        "Simularbre",
+                        "Cerfrousse",
+                        "Banshitrouye",
+                        "Raichu"
                     ],
-                    answer: "Clea",
-                    heroId: 1009239
+                    answer: "Banshitrouye",
+                    pokeId: 711
                 },
                 {
                     id: 9,
-                    question: "Étant enfant, Storm a tenté de ...",
+                    question: "Quel Pokémon légendaire vivait autrefois sur la tour Feraille ?",
                     options: [
-                        "Incendier un village avec un coup de foudre",
-                        "Devenir le chef d'un gang",
-                        "Voler la voiture du professeur Xavier",
-                        "Faire les poches du professeur Xavier"
+                        "Ho-Oh",
+                        "Jirachi",
+                        "Lugia",
+                        "Aucun Pokémon"
                     ],
-                    answer: "Faire les poches du professeur Xavier",
-                    heroId: 1009629
+                    answer: "Lugia",
+                    pokeId: 249
                 }
             ]
         }

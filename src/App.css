@@ -16,6 +16,7 @@
 /* SUBMIT BUTTON */
 /* MODAL */
 /* MEDIA QUERIES */
+/* CUSTOM SVG */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Anton|Bangers|Carter+One&display=swap');
@@ -24,15 +25,17 @@
 :root {
   --white-color: #ffffff;
   --light-grey-color: #EAE8E8;
-  --light-green-color: #A0E8AF;
-  --green-color: #3AB795;
+  --light-green-color: #25d29b;
+  --green-color: #25d29b;
   --red-color: #FF6961;
   --blue-color: #4f78a4;
   --dark-red-color: #A80900;
   --dark-grey-color: #363636;
-  --black-color: #333030;
+  --black-color: #1b1e20;
   --deep-black-color: #000000;
 }
+
+
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -77,7 +80,7 @@ h3 {
 body {
   margin: 0;
   padding: 0;
-  background-image: url(images/bg-noise-texture.png);
+  background: var(--black-color);
   background-repeat: repeat;
   height: 100vh;
   display: flex;
@@ -161,8 +164,6 @@ footer {
 
 /* SIGNUP - LOGIN - FORGETPASSWORD */
 .signUpLoginBox {
-  background-image: url(images/bg-noise-texture.png);
-  background-repeat: repeat;
   -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
   box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
@@ -176,16 +177,20 @@ footer {
 }
 
 .formBoxLeftSignup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 500px;
-  background-image: url(images/ironman.png);
   background-repeat: no-repeat;
   background-position: center center;
   flex: 0 1 50%;
 }
 
 .formBoxLeftLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 500px;
-  background-image: url(images/spiderman.png);
   background-repeat: no-repeat;
   background-position: center center;
   flex: 0 1 50%;
@@ -193,7 +198,6 @@ footer {
 
 .formBoxLeftForget {
   min-height: 500px;
-  background-image: url(images/deadpool.png);
   background-repeat: no-repeat;
   background-position: center center;
   flex: 0 1 50%;
@@ -214,7 +218,7 @@ footer {
 
 .formContent {
   width: 100%;
-  padding: 20px;
+  padding: 50px 20px;
   box-sizing: border-box;
 }
 
@@ -791,4 +795,32 @@ input:checked+.slider:before {
     flex: 0 1 100%;
   }
 
+}
+
+/* CUSTOM SVG */
+.pokeball {
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+
+.pokeball svg {
+  display: block;
+  height: 80%;
+  width: 100%;
+} 
+
+.pokeball-line {
+  stroke-dasharray: 340;
+  stroke-dashoffset: 40;
+  animation: pokeball-line 6.5s linear infinite;
+}
+
+@keyframes pokeball-line {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 40;
+  }
 }
